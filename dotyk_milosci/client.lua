@@ -1,5 +1,5 @@
-RegisterNetEvent("jumpscare:toggleNUI")
-AddEventHandler("jumpscare:toggleNUI", function(display)
+RegisterNetEvent("dotykmilosci:toggleNUI")
+AddEventHandler("dotykmilosci:toggleNUI", function(display)
     SendNUIMessage({
     type = "ui",
     display = display
