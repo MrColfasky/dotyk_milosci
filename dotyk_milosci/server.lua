@@ -1,14 +1,13 @@
 local allowed =
 {
-    "steam:1100001369aebc8",
+    "steam:steamhex1",
     "steam:steamhex2",
     "steam:steamhex3",
     "steam:steamhex4"
 }
 --You can get your steamhex from http://www.vacbanned.com/ and entering your steam id then copying Steam3 ID (64bit) HEX and not DEC
-RegisterCommand("nigger", function(source, args)
-    -- Usage: /jumpscareon <ID>
-    -- Creates a popup on the players screen and starts playing a sound.
+RegisterCommand("dotykmilosci", function(source, args)
+    -- Usage: /dotykmilosci <ID>
     local identifier = GetPlayerIdentifiers(source)[1]
     if checkAllowed(identifier) then
       if args[1] == nil then
@@ -16,13 +15,12 @@ RegisterCommand("nigger", function(source, args)
 	return
       end
       local target = args[1]
-      TriggerClientEvent("jumpscare:toggleNUI", target, true)
+      TriggerClientEvent("dotykmilosci:toggleNUI", target, true)
     end
 end)
 
-RegisterCommand("niggeroff", function(source, args)
-    -- Usage: /jumpscareoff <ID>
-    -- Removes the popup from the players screen.
+RegisterCommand("dotykmiloscioff", function(source, args)
+    -- Usage: /dotykmilosci <ID>
     local identifier = GetPlayerIdentifiers(source)[1]
     if checkAllowed(identifier) then
         if args[1] == nil then
@@ -31,7 +29,7 @@ RegisterCommand("niggeroff", function(source, args)
         end
 
         local target = args[1]
-        TriggerClientEvent("jumpscare:toggleNUI", target, false)
+        TriggerClientEvent("dotykmilosci:toggleNUI", target, false)
     end
 end)
 
